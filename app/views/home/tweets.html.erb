@@ -1,0 +1,7 @@
+<%= render 'search' %>
+</br>
+</br>
+<h2>Tweets from <%= handle %></h2>
+<ul>
+  <%= render partial: 'tweet', collection: @tweets, as: :tweet %>
+</ul>
