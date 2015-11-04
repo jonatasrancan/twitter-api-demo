@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.4'
 gem 'devise', '3.4.1'
 gem 'pg'
+gem 'twitter'
+gem 'dotenv-rails'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
