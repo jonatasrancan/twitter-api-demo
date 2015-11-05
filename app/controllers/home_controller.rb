@@ -7,12 +7,18 @@ class HomeController < ApplicationController
   def tweets
     @handle = params[:handle]
 
-    @tweets = TwitterClient.find_tweets(@handle)
+    @tweets = find_tweets
   end
 
   private
 
   def need_valid_handle
     render :need_valid_handle
+  end
+
+  def find_tweets
+    Rails.cache.fetch(['tweets', @handle], expires_in: 5.minutes) do
+      TwitterClient.find_tweets(@handle)
+    end
   end
 end
