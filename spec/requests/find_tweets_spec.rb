@@ -11,7 +11,8 @@ feature 'Find tweets' do
     fill_in 'handle', with: 'jondoe'
     click_button 'Find'
 
-    expect(page).to have_content 'Who am i?'
     expect(page).to have_content 'Tweets from @jondoe'
+    expect(page).to have_content 'Who am i?'
+    expect(page).to have_link '@mention', href: 'http://twitter.com/mention'
   end
 end
