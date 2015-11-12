@@ -13,7 +13,7 @@ feature 'Authentication' do
 
     click_button 'Log in'
 
-    expect(page).to have_content 'Signed in successfully.'
+    expect(page).to have_notice 'Signed in successfully.'
   end
 
   scenario 'Log Out' do
@@ -21,7 +21,7 @@ feature 'Authentication' do
 
     click_link 'Sign out'
 
-    expect(page).to have_content 'Signed out successfully.'
+    expect(page).to have_notice 'Signed out successfully.'
   end
 
   scenario 'Sign up' do
@@ -35,6 +35,6 @@ feature 'Authentication' do
 
     click_button 'Sign up'
 
-    expect(page).to have_content 'Welcome! You have signed up successfully.'
+    expect(page).to have_notice 'Welcome! You have signed up successfully.'
   end
 end
