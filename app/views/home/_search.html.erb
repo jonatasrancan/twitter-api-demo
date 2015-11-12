@@ -1,4 +1,6 @@
-<%= form_tag tweets_path, method: :get do %>
-  <%= text_field_tag :handle, params[:handle], required: true, name: 'handle' %>
-  <%= button_tag 'Find' %>
-<% end %>
+<div class="search-form">
+  <%= form_tag tweets_path, method: :get do %>
+    <%= text_field_tag :handle, params[:handle], required: true, name: 'handle', placeholder: 'Type a handle' %>
+    <%= button_tag 'Find', class: "btn btn-success" %>
+  <% end %>
+</div>

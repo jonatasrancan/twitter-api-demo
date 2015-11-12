@@ -12,8 +12,4 @@ module ApplicationHelper
   def create_link(mention)
     link_to "@#{mention}", "http://twitter.com/#{mention}"
   end
-
-  def handle
-    @handle.include?('@') ? @handle : '@' + @handle
-  end
 end

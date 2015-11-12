@@ -1,7 +1,7 @@
 <%= render 'search' %>
 </br>
 </br>
-<h2>Tweets from <%= handle %></h2>
-<ul>
+<h2>Tweets from <%= create_link(@handle) %></h2>
+<ul class='list-group'>
   <%= render partial: 'tweet', collection: @tweets, as: :tweet %>
 </ul>

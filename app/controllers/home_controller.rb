@@ -13,6 +13,7 @@ class HomeController < ApplicationController
   private
 
   def need_valid_handle
+    flash['error'] = 'Please inform a valid twitter handle'
     render :need_valid_handle
   end
 
